@@ -49,13 +49,13 @@ const Home = () => {
         </div>
         <div className="prompt-container">
           <textarea 
-            placeholder="start typing here" 
+            placeholder="e.g. produces smart dog collars that translate barks into english and track via gps" 
             className="prompt-box"
             value={userInput}
             onChange={onUserChangedText} 
           />
           <div className="prompt-buttons">
-            <a 
+            <a
               className={isGenerating ? 'generate-button loading' : 'generate-button'} 
               onClick={callGenerateEndpoint}>
               <div className="generate">
