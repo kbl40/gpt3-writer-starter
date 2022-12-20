@@ -71,7 +71,7 @@ const Home = () => {
                 </div>
               </div>
               <div className='output-content'>
-                <p>{apiOutput}</p>
+                <pre><code>{apiOutput}</code></pre>
               </div>
             </div>
           )}

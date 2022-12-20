@@ -79,12 +79,7 @@ body {
 }
 
 .prompt-box {
-    border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-style: solid;
-    border-top-width: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     place-content: flex-start;
     align-items: flex-start;
     background-color: rgba(255, 255, 255, 0.05);
@@ -95,7 +90,7 @@ body {
     gap: 10px;
     height: 150px;
     overflow: hidden;
-    padding: 20px;
+    padding: 1.25em;
     position: relative;
     width: 610px;
     max-width: 1200px;
@@ -186,6 +181,23 @@ textarea {
     width: min-content;
     will-change: transform;
     cursor: pointer;
+}
+
+.copy-code-button {
+    background-color:rgb(255, 79, 18);
+    color:#FFF;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: -2px;
+    padding: 0.5em 1em;
+    font-size: 0.7rem;
+}
+
+.copy-code-button:hover,
+.copy-code-button:focus {
+    cursor: pointer;
+    outline: 0;
 }
 
 .generate {
@@ -320,10 +332,15 @@ textarea {
     transform: none;
 }
 
-.output-content p {
-    text-align: left;
-    white-space: pre-line;
+.output-content pre {
+    /* text-align: left; */
+    display: block;
+    white-space: pre-wrap;
     color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.25em;
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
