@@ -41,10 +41,11 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Having trouble generating content to practice frontend development?</h1>
+            <h1>Tackle quests to level-up your frontend dev skills</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Write a quick sentence explaining what a company does (e.g. makes smart surfboards to collect weather data) and we'll generate custom html for you to practice and level-up your css and frontend layouts skills</h2>
+            <h2>Learn frontend styling + CSS with custom content and HTML generated for your learning journey</h2>
+            <h2>Since you are the ⚔️ Hero 🛡️ on this journey, let's start by building a website about you! Write a couple of sentences about yourself and your journey so far.</h2>
           </div>
         </div>
         <div className="prompt-container">
