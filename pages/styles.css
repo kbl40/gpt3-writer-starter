@@ -10,7 +10,7 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #808f87;
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: #FFF
+    color: #faff81;
 }
 
 .header-title {
@@ -63,7 +63,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.75);
+    color: #faff81;
 }
 
 .prompt-container {
@@ -82,7 +82,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #01200f;
     border-radius: 16px;
     display: flex;
     flex: 0 0 auto;
@@ -103,7 +103,7 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
     text-align: start;
-    color: rgba(255, 255, 255, 0.75);
+    color: #f97068;
     text-decoration: none;
     text-transform: none;
 }
@@ -167,7 +167,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: #4e598c;
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -181,23 +181,6 @@ textarea {
     width: min-content;
     will-change: transform;
     cursor: pointer;
-}
-
-.copy-code-button {
-    background-color:rgb(255, 79, 18);
-    color:#FFF;
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
-    margin-bottom: -2px;
-    padding: 0.5em 1em;
-    font-size: 0.7rem;
-}
-
-.copy-code-button:hover,
-.copy-code-button:focus {
-    cursor: pointer;
-    outline: 0;
 }
 
 .generate {
@@ -316,7 +299,7 @@ textarea {
     letter-spacing: 0px;
     line-height: 1.4em;
     text-align: start;
-    color: #ffffff;
+    color: #faff81;
     text-decoration: none;
     text-transform: none;
     margin: 0;
@@ -337,7 +320,7 @@ textarea {
     display: block;
     white-space: pre-wrap;
     color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #01200f;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 1.25em;
