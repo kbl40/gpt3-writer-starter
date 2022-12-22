@@ -7,9 +7,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `
-    Write four very short headings for a company's blog post describing its product.
-    
-    The company  
+    Without repeating the names of the songs or artists, what personality traits would a person with this top five Spotify songs have?  
     `;
 const generateAction = async (req, res) => {
     // Run first prompt
@@ -18,8 +16,8 @@ const generateAction = async (req, res) => {
     const baseCompletion = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: `${basePromptPrefix}${req.body.userInput}\n`,
-        temperature: 0.8,
-        max_tokens: 250, // Set this to 750 later
+        temperature: 0.7,
+        max_tokens: 250, 
     });
 
     const basePromptOutput = baseCompletion.data.choices.pop();
@@ -28,20 +26,19 @@ const generateAction = async (req, res) => {
 
     const secondPrompt = 
     `
-    Take the Headings and Company Description and generate the html for a website. Do not include a style element or CSS.  The company's website should have a mobile-first design style and is similar in style to Tesla's website. The website should be minimalistic but include places for images to be included. It needs to have a header with a nav element, two sections, and a footer. Each section should contain two subheadings. Each subheading should have two paragraph elements in each of them.
+    Top 5 Spotify song list: ${req.body.userInput}
 
-    Headings: ${basePromptOutput.text}
+    ${basePromptOutput.text}
 
-    Company Description: ${req.body.userInput}
-
+    Imagine this person is a hero that is about to start an epic quest.  They are seeking a mentor and partner to help them on their journey. Without repeating the names of the songs, generate the html for a website describing the hero and their story so far. the website should be told from the first person perspective. Do not include a style element or CSS.  The hero's website should have a mobile-first design style and is similar to a blog site. The website should be minimalistic with a header with nav element but include places for images to be included. include buttons in the footer that link to the hero's twitter and instagram pages. 
     `
 
     // Call the OpenAI API a second time
     const secondPromptCompletion = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: `${secondPrompt}`,
-        temperature: 0.75,
-        max_tokens: 1500,
+        temperature: 0.8,
+        max_tokens: 1250,
     });
 
     const secondPromptOutput = secondPromptCompletion.data.choices.pop();

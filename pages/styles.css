@@ -23,16 +23,15 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    flex: 0 0 auto;
+    /* flex: 0 0 auto; */
     flex-flow: column nowrap;
-    gap: 10px;
     height: fit-content;
     max-width: 975px;
     overflow: auto;
     padding: 50px;
     position: relative;
     width: auto;
-    gap: 64px;
+    gap: 0.1em;
 }
 
 .header {    
@@ -40,7 +39,9 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
     color: #faff81;
+    border-bottom: 5px solid #01200f;
 }
 
 .header-title {
@@ -78,6 +79,17 @@ body {
     width: min-content;
 }
 
+.prompt-container-text {
+    display: flex;
+    flex-direction: column;
+    color: #faff81;
+    gap: 0.25rem;
+}
+
+.prompt-container-text h2 {
+    text-align: center;
+}
+
 .prompt-box {
     border: 1px solid rgba(255, 255, 255, 0.1);
     place-content: flex-start;
@@ -106,6 +118,7 @@ body {
     color: #f97068;
     text-decoration: none;
     text-transform: none;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -251,6 +264,13 @@ textarea {
     padding-right: 5px;
 }
 
+.hero-img {
+    margin-top: 1.5em;
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+}
+
 .badge p {
     margin: 0;
 }
@@ -319,11 +339,19 @@ textarea {
     /* text-align: left; */
     display: block;
     white-space: pre-wrap;
-    color: rgba(255, 255, 255, 0.5);
+    color: #f97068;
     background-color: #01200f;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 1.25em;
+}
+
+.output-explanation {
+    color: #faff81;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
@@ -387,6 +415,11 @@ textarea {
 
     .prompt-box {
         width: 100%;
+    }
+
+    .hero-img {
+        width: 400px;
+        height: 400px;
     }
 }
 
